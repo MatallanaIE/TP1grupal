@@ -1,72 +1,72 @@
 //-------------------------COLORES Y MATERIALES------------------------//
 
-const rojo={
-  esFuerte(){
+const rojo = {
+  esFuerte() {
     return true
   },
-  getNombre(){
+  getNombre() {
     return "rojo"
   }
 }
-const pardo={
-  esFuerte(){
+const pardo = {
+  esFuerte() {
     return false
   },
-  getNombre(){
+  getNombre() {
     return "pardo"
   }
 }
-const verde={
-  esFuerte(){
+const verde = {
+  esFuerte() {
     return true
   },
-  getNombre(){
+  getNombre() {
     return "verde"
   }
-} 
+}
 
 const celeste = {
-  esFuerte(){
+  esFuerte() {
     return false
   },
-  getNombre(){
+  getNombre() {
     return "celeste"
   }
 }
 
 const naranja = {
-  esFuerte(){
+  esFuerte() {
     return true
   },
-  getNombre(){
+  getNombre() {
     return "naranja"
   }
 }
 
-const cobre={
-  esBrillante(){
+const cobre = {
+  esBrillante() {
     return true
   }
 }
 
 const vidrio = {
-  esBrillante(){
+  esBrillante() {
     return true
   }
 }
 
 const madera = {
-  esBrillante(){
+  esBrillante() {
     return false
   }
 }
 const cuero = {
-  esBrillante(){
+  esBrillante() {
     return false
   }
 }
 const lino = {
-  esBrillante(){
+  esBrillante() {
     return false
   }
 }
@@ -74,88 +74,88 @@ const lino = {
 //--------------------------------OBJETOS--------------------------------//
 
 const remera = {
-  getPeso(){
+  getPeso() {
     return 800
   },
-  getMaterial(){
+  getMaterial() {
     return lino
   },
-  getColor(){
-    return rojo 
+  getColor() {
+    return rojo
   },
-  getNombre(){
+  getNombre() {
     return "remera"
   }
 }
 
 const pelota = {
-  getPeso(){
+  getPeso() {
     return 1300
   },
-  getMaterial(){
+  getMaterial() {
     return cuero
   },
-  getColor(){
-    return pardo 
+  getColor() {
+    return pardo
   },
-  getNombre(){
+  getNombre() {
     return "pelota"
   }
 }
 
 const biblioteca = {
-  getPeso(){
+  getPeso() {
     return 8000
   },
-  getMaterial(){
+  getMaterial() {
     return lino
   },
-  getColor(){
-    return verde 
+  getColor() {
+    return verde
   },
-  getNombre(){
+  getNombre() {
     return "biblioteca"
   }
 }
 
 const munieco = {
   peso: undefined,
-  getPeso(){
-    return peso
+  getPeso() {
+    return this.peso
   },
-  setPeso(valor){
-    this.peso=valor
+  setPeso(valor) {
+    this.peso = valor
   },
-  getMaterial(){
+  getMaterial() {
     return vidrio
   },
-  getColor(){
-    return celeste 
+  getColor() {
+    return celeste
   },
-  getNombre(){
+  getNombre() {
     return "munieco"
   }
 }
 
 const placa = {
-  peso:undefined,
-  color:undefined,
-  getPeso(){
-    return peso
+  peso: undefined,
+  color: undefined,
+  getPeso() {
+    return this.peso 
   },
-  setPeso(valor){
-    this.peso=valor
+  setPeso(valor) {
+    this.peso = valor
   },
   setColor(unColor) {
     this.color = unColor
   },
-  getColor(){
+  getColor() {
     return this.color
   },
-  getMaterial(){
+  getMaterial() {
     return cobre
   },
-  getNombre(){
+  getNombre() {
     return "placa"
   }
 }
@@ -163,130 +163,130 @@ const placa = {
 //------------------------OBJETOS EXTRA------------------------------//
 
 const arito = {
-  getPeso(){
+  getPeso() {
     return 180
   },
-  getMaterial(){
+  getMaterial() {
     return cobre
   },
-  getColor(){
-    return celeste 
+  getColor() {
+    return celeste
   },
-  getNombre(){
+  getNombre() {
     return "arito"
   }
 }
 
 const banquito = {
-  getPeso(){
+  getPeso() {
     return 1700
   },
-  getMaterial(){
+  getMaterial() {
     return madera
   },
-  getColor(){
-    return naranja 
+  getColor() {
+    return naranja
   },
   setColor(unColor) {
     this.color = unColor
   },
-  getNombre(){
+  getNombre() {
     return "banquito"
   }
 }
 
 const cajita = {
-  peso:400,
-  objetoDentro : undefined,
+  peso: 400,
+  objetoDentro: undefined,
   ponerObjetoDentro(objeto) {
-    this.peso=400
+    this.peso = 400
     this.objetoDentro = objeto
     this.peso += objeto.getPeso()
-    },
-  getPeso(){
+  },
+  getPeso() {
     return this.peso
   },
-  getMaterial(){
+  getMaterial() {
     return cobre
   },
-  getColor(){
-    return rojo 
+  getColor() {
+    return rojo
   },
-  getNombre(){
+  getNombre() {
     return "cajita"
   }
 }
 
 //--------------------------------PERSONAS--------------------------------//
 
-const Rosa  = {
+const Rosa = {
   leGusta(objeto) {
-    return objeto.getPeso() <= 2000 
+    return objeto.getPeso() <= 2000
   }
 }
 
-const Estefania  = {
+const Estefania = {
   leGusta(objeto) {
-    return objeto.getColor().esFuerte() 
+    return objeto.getColor().esFuerte()
   }
 }
 
-const Luisa  = {
+const Luisa = {
   leGusta(objeto) {
     return objeto.getMaterial().esBrillante()
   }
 }
 
-const Juan  = {
+const Juan = {
   leGusta(objeto) {
-    return !objeto.getColor().esFuerte() || (objeto.getPeso()<=1800 && objeto.getPeso()>=1200)
+    return !objeto.getColor().esFuerte() || (objeto.getPeso() <= 1800 && objeto.getPeso() >= 1200)
   }
 }
 
 //--------------------------------BOLICHITO--------------------------------//
 
-const bolichito={
-  mostrador:undefined,
-  vidriera:undefined,
-  cargarMostrador(objeto){
-    this.mostrador=objeto
+const bolichito = {
+  mostrador: undefined,
+  vidriera: undefined,
+  cargarMostrador(objeto) {
+    this.mostrador = objeto
   },
-  cargarVidriera(objeto){
-    this.vidriera=objeto
+  cargarVidriera(objeto) {
+    this.vidriera = objeto
   },
-  verObjetoEnMostrador(){
+  verObjetoEnMostrador() {
     return this.mostrador
   },
-  verObjetoEnVidriera(){
+  verObjetoEnVidriera() {
     return this.vidriera
   },
-  esBrillante(){
-    return this.mostrador.getMaterial().esBrillante() && 
-    this.vidriera.getMaterial().esBrillante()
+  esBrillante() {
+    return this.mostrador.getMaterial().esBrillante() &&
+      this.vidriera.getMaterial().esBrillante()
   },
-  esMonocromatico(){
+  esMonocromatico() {
     return this.mostrador.getColor() == this.vidriera.getColor()
   },
-  estaDesequilibrado(){
+  estaDesequilibrado() {
     return this.mostrador.getPeso() > this.vidriera.getPeso()
   },
-  tieneAlgoDeColor(color){
-    return this.mostrador.getColor()==color || this.vidriera.getColor()==color
+  tieneAlgoDeColor(color) {
+    return this.mostrador.getColor() == color || this.vidriera.getColor() == color
   },
 
-  
-  puedeMejorar(){
+
+  puedeMejorar() {
     return this.esMonocromatico() || this.estaDesequilibrado()
   },
 
 
 
- puedeOfrecerleAlgoA(persona){
+  puedeOfrecerleAlgoA(persona) {
 
-   return persona.leGusta(this.mostrador) || persona.leGusta (this.vidriera)
-     
-  
- }
+    return persona.leGusta(this.mostrador) || persona.leGusta(this.vidriera)
+
+
+  }
 }
 
 //--------------------------------pruebas--------------------------------//
@@ -351,3 +351,17 @@ console.log(`dentro de la vidriera del bolichito hay: ${bolichito.verObjetoEnVid
 console.log(`dentro del mostrador del bolichito hay: ${bolichito.verObjetoEnMostrador().getNombre()} `)
 console.log(`peso cajita ${cajita.getPeso()}`)
 console.log(`esta desequilibrado?: ${bolichito.estaDesequilibrado()}`)
+
+
+console.log(` `)
+console.log(`-------------------------------- `)
+placa.setPeso(100)
+munieco.setPeso(999)
+bolichito.cargarVidriera(munieco)
+bolichito.cargarMostrador(placa)
+console.log(`dentro de la vidriera del bolichito hay: ${bolichito.verObjetoEnVidriera().getNombre()} `)
+console.log(`dentro del mostrador del bolichito hay: ${bolichito.verObjetoEnMostrador().getNombre()} `)
+console.log(`esta desequilibrado?: ${bolichito.estaDesequilibrado()}`)
+console.log(`la placa pesa: ${placa.getPeso()}`)
+console.log(`el minieco pesa: ${munieco.getPeso()}`)
+
