@@ -316,3 +316,5 @@ console.log(`esta desequilibrado?: ${bolichito.estaDesequilibrado()}`)
 console.log(`puede mejorar:? ${bolichito.puedeMejorar()}`)
 console.log(`puede ofrecerle algo a Rosa? ${bolichito.puedeOfrecerleAlgoA(Rosa)}`)
 console.log(`puede ofrecerle algo a Luisa? ${bolichito.puedeOfrecerleAlgoA(Luisa)}`)
+
+console.log(` `)
