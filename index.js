@@ -286,8 +286,6 @@ const bolichito={
 
 //--------------------------------pruebas--------------------------------//
 
-console.log(pelota.material().esBrillante())
-console.log(pelota.color().esFuerte())
 console.log(`la remera es color: ${remera.color().nombre()}`)
 console.log(` `)
 console.log(`a rosa le gusta la remera? ${Rosa.leGusta(remera)}`)
@@ -317,4 +315,4 @@ console.log(`puede mejorar:? ${bolichito.puedeMejorar()}`)
 console.log(`puede ofrecerle algo a Rosa? ${bolichito.puedeOfrecerleAlgoA(Rosa)}`)
 console.log(`puede ofrecerle algo a Luisa? ${bolichito.puedeOfrecerleAlgoA(Luisa)}`)
 
-console.log(` `)
+console.log(`aaaaaa `)
